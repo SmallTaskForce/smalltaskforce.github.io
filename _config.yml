@@ -2,7 +2,7 @@ title: "US LAYER"
 email: hello@smalltaskforce.com
 formspree: xqknzwyk
 timezone: UTC
-baseurl: "smalltaskforce.github.io"
+baseurl: "/"
 permalink: "/:title/"
 logo: 'assets/images/uslayer-logo.svg'
 favicon: 'assets/images/fav.svg'
