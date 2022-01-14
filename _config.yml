@@ -1,0 +1,40 @@
+title: "US LAYER"
+email: hello@smalltaskforce.com
+formspree: xqknzwyk
+timezone: UTC
+baseurl: "/"
+permalink: "/:title/"
+logo: 'assets/images/uslayer-logo.svg'
+favicon: 'assets/images/fav.svg'
+author: Admin
+paginate: 30
+disqus: 'uslayer'
+locale: en_us
+lang: en_us
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+
+ganalytics: G-SX2M6Q5WKD
+fbpageid: uslayer
+
+
+# Social
+social:
+#  instagram: https://www.instagram.com/uslayer/
+  facebook: https://www.facebook.com/uslayer
+  twitter: https://twitter.com/us_layer
+  youtube: https://www.youtube.com/uslayer
+
+# Plugins
+plugins:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-archives

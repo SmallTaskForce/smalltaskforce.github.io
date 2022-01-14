@@ -1,0 +1,80 @@
+<!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "{{site.fbpageid}}");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+<footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" class="d-block me-2" viewBox="0 0 19.4 19.8" role="img"><title>US LAYER</title><defs></defs><path fill-rule="evenodd" clip-rule="evenodd" d="M15.65,0H3.75A3.75,3.75,0,0,0,0,3.75v12.3A3.75,3.75,0,0,0,3.75,19.8h11.9a3.75,3.75,0,0,0,3.75-3.75V3.75A3.75,3.75,0,0,0,15.65,0ZM3.43,13.92C2,14,1.51,13.13,2,11.46L3.6,6.19H5.52L4,11c-.19.5-.07.73.37.7H7L8.76,6.19h2L8.35,13.92ZM17.16,8.2h-4a3.6,3.6,0,0,0-.64,0,.81.81,0,0,0-.46.34c0,.25,0,.39.19.42a3.59,3.59,0,0,0,.69.05h2a1.64,1.64,0,0,1,1.5.73,2.5,2.5,0,0,1,0,1.83,3.79,3.79,0,0,1-1.16,1.73,3.43,3.43,0,0,1-2.12.58H8.68l.62-2h4.17a6.16,6.16,0,0,0,.84,0c.19,0,.35-.17.48-.44s0-.34-.21-.38a3.12,3.12,0,0,0-.83-.07h-1.9c-.84,0-1.38-.21-1.64-.65a2.24,2.24,0,0,1,0-1.8A3.71,3.71,0,0,1,11.4,6.81a3.78,3.78,0,0,1,2.09-.62h4.29Z" fill="currentColor"></path></svg>
+          <span class="fs-5">US LAYER</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Hear as US LAYER our intention is to provide information(IT) services. So we mainly provide security, management and information services. Such as, <a href="#">Web developing and designing,</a> <a href="#">Software developing,</a> Networking, <a href="#">CCTV</a> and many more…</li>
+          <li class="mb-2">Copyright © US LAYER</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>QUICK LINKS</h5>
+        <ul class="list-unstyled">
+          {% for item in site.data.menus.footermenu %}
+            <li class="mb-2">
+              <a href="{% unless item.external %}{{site.baseurl}}/{% endunless %}{{item.url}}" alt="{{item.title}}">{{item.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3 mb-3">
+        <h5>HOSTING & PRODUCTS</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://hosting.uslayer.com/optimized-wordpress-hosting" target="_blank">WordPress Hosting</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/cloudhosting" target="_blank">Cloud Hosting</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/web-hosting/linux-hosting" target="_blank">Linux Hosting</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/website-design" target="_blank">Website Builder</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3 mb-3">
+        <h5>DOMAINS</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://hosting.uslayer.com/domain-registration/" target="_blank">Register Domain Name</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/domain-registration/domain-registration-price" target="_blank">View Domain Pricing</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/domain-registration/domain-whois-lookup" target="_blank">Whois Lookup</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/domain-registration/free-with-domain-registration" target="_blank">Free with Every Domain</a></li>
+          <li class="mb-2"><a href="https://hosting.uslayer.com/domain-registration/domain-name-suggestion-tool" target="_blank">Name Suggestion Tool</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript
+================================================== -->
+<!--<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script> -->
+<script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/test.min.js"></script>

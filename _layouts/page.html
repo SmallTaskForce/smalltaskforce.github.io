@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<!-- Post Featured Image
+{% if page.image %}
+<div class="text-center mx-auto mb-5">
+  <img class="featured-image text-center mx-auto rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+</div>
+{% endif %}
+<!-- End Featured Image -->
+
+
+
+<div class="container py-4">
+
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">{{ page.title }}</h1>
+        {{content}}
+      </div>
+    </div>
+
+
+    {% if page.comments == true %}
+    <div id="comments">
+        {% include disqus.html %}
+    </div>
+    {% endif %}
+
+  </div>
