@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "9+4OWsgT",
+  "version": "+lrNmrgw",
   "assets": [
     {
       "hash": "sha256-z5vok3vPINnlWY1/TyHWx6VbwII6qL6haVzweUaRyj8=",
@@ -90,7 +90,7 @@ self.assetsManifest = {
       "url": "_framework/MudBlazor.dll"
     },
     {
-      "hash": "sha256-8wdIV4bsYZaQCX3Wc6MXDxnB2f18AfHN29tqM2muGdI=",
+      "hash": "sha256-Ne2/WDwST3+e2rWl6HcX/8SACxr8CnUSAAuvoq6MqdQ=",
       "url": "_framework/SmallTaskForceWeb.dll"
     },
     {
@@ -186,7 +186,7 @@ self.assetsManifest = {
       "url": "_framework/System.dll"
     },
     {
-      "hash": "sha256-sF3CQw7jhSb5ox0QOrq7Yt8NJc2iRxppNKQ4KXkKWRE=",
+      "hash": "sha256-hhwN2GONdDbOKbmYhmQzhfvoqGSPacKMRYivu3+x9NQ=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -216,6 +216,10 @@ self.assetsManifest = {
     {
       "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs=",
       "url": "_framework/icudt_no_CJK.dat"
+    },
+    {
+      "hash": "sha256-if1zjpjuUXxPDosb3v/h1QTQcIE0b1txz2sW1f+zEJ4=",
+      "url": "critical-privacy-policy.md"
     },
     {
       "hash": "sha256-Du6HaMUHnhNve2LKxSBd7I3RtDQBwUJcJ6U8AxkO8vA=",
