@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
-using MudBlazor;
-using System.Runtime.CompilerServices;
-using Blazored.LocalStorage;
+﻿using MudBlazor;
+
 
 namespace SmallTaskForceWeb.Shared;
 
@@ -15,7 +12,7 @@ public partial class MainLayout
     // https://mudblazor.com/features/colors#material-colors-list-of-material-colors
     MudTheme _theme = new MudTheme()
     {
-        Palette = new Palette()
+        PaletteLight = new PaletteLight()
         {
             Primary = Colors.Blue.Default,
             Secondary = Colors.Blue.Accent2,
@@ -35,16 +32,16 @@ public partial class MainLayout
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // set them mode from system preference
-        if (firstRender && string.IsNullOrEmpty(LocalStorage.ContainKeyAsync("_isDarkMode").ToString()))
+        if (!firstRender)
+            return;
+
+        if (!await LocalStorage.ContainKeyAsync("_isDarkMode") && _mudThemeProvider is not null)
         {
             _isDarkMode = await _mudThemeProvider.GetSystemPreference();
             StateChanged();
         }
     }
 
-    [Inject]
-    public ILocalStorageService LocalStorage { get; set; }
     protected override async Task OnInitializedAsync()
     {
         if (await LocalStorage.ContainKeyAsync("_isDarkMode"))
