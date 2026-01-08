@@ -1,52 +1,36 @@
 ﻿@inherits LayoutComponentBase
-@using Blazored.LocalStorage
-@inject ILocalStorageService LocalStorage
 
-<MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
-<MudDialogProvider />
-<MudSnackbarProvider />
+<div class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <header class="border-b bg-white/80 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-semibold">ST</div>
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">SmallTaskForce</div>
+                    <div class="text-sm text-slate-500">Software Development</div>
+                </div>
+            </div>
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <NavLink class="hover:text-slate-900" href="/" Match="NavLinkMatch.All">Home</NavLink>
+                <NavLink class="hover:text-slate-900" href="#services">Services</NavLink>
+                <NavLink class="hover:text-slate-900" href="#process">Process</NavLink>
+                <NavLink class="hover:text-slate-900" href="#contact">Contact</NavLink>
+            </nav>
+        </div>
+    </header>
 
-<MudLayout>
-    <MudAppBar Style="@_appBarBackgroundColorCSS">
-        <MudHidden Breakpoint="Breakpoint.MdAndUp">
-            <MudIconButton OnClick="DrawerToggle" Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" />
-            <div class="flex-grow-1"></div>
-            <NavLink ActiveClass="d-flex" href="/">
-                <SmallTaskForceLogo />
-            </NavLink>
-            <div class="flex-grow-1"></div>
-        </MudHidden>       
-        
-        <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">
-            <NavLink ActiveClass="d-flex me-4" href="/">
-                <SmallTaskForceLogo/>
-            </NavLink>
-           
-        
-        <MudSpacer />
+    <main class="flex-1">
+        @Body
+    </main>
 
-        <MudTooltip Duration="1000" Text="@themModeText">
-                <MudToggleIconButton ToggledChanged="@OnThemeModeChange" Icon="@Icons.Material.Filled.LightMode"
-                                     ToggledIcon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
-        </MudTooltip>       
-        
-        </MudHidden>
-        
-        
-    </MudAppBar>
-    <MudHidden Breakpoint="Breakpoint.MdAndUp">        
-        <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
-            <MudDrawerHeader>
-                <MudToggleIconButton ToggledChanged="@OnThemeModeChange" Icon="@Icons.Material.Filled.LightMode"
-                                     ToggledIcon="@Icons.Material.Filled.DarkMode"></MudToggleIconButton>
-            </MudDrawerHeader>
-            <NavMenu />
-        </MudDrawer>
-    </MudHidden>
-    
-    <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
-            @Body
-        </MudContainer>
-    </MudMainContent>
-</MudLayout>
+    <footer class="border-t bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-6 text-sm text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>© @DateTime.Now.Year SmallTaskForce. All rights reserved.</div>
+            <div class="flex flex-wrap items-center gap-3">
+                <a class="hover:text-slate-800" href="mailto:hello@smalltaskforce.com">hello@smalltaskforce.com</a>
+                <span class="text-slate-300">|</span>
+                <span>Building reliable software, fast.</span>
+            </div>
+        </div>
+    </footer>
+</div>
