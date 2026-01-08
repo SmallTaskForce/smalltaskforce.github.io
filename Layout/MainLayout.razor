@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+
+<div class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <header class="border-b bg-white/80 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-semibold">ST</div>
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">SmallTaskForce</div>
+                    <div class="text-sm text-slate-500">Software Development</div>
+                </div>
+            </div>
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a class="hover:text-slate-900" href="/">Home</a>
+                <a class="hover:text-slate-900" href="#services">Services</a>
+                <a class="hover:text-slate-900" href="#process">Process</a>
+                <a class="hover:text-slate-900" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        @Body
+    </main>
+
+    <footer class="border-t bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-6 text-sm text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>© @DateTime.Now.Year SmallTaskForce. All rights reserved.</div>
+            <div class="flex flex-wrap items-center gap-3">
+                <a class="hover:text-slate-800" href="mailto:hello@smalltaskforce.com">hello@smalltaskforce.com</a>
+                <span class="text-slate-300">|</span>
+                <span>Building reliable software, fast.</span>
+            </div>
+        </div>
+    </footer>
+</div>
