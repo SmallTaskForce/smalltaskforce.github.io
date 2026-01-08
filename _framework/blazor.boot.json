@@ -1,7 +1,7 @@
 {
   "entryAssembly": "SmallTaskForceWeb",
   "resources": {
-    "hash": "sha256-st6InXtfGRPVDNBpl8r8iQazVBt81MysCS3O3YV/juM=",
+    "hash": "sha256-V6tEI1oWrYUecU56W2MBDEYUcHOwzIT+LPQ7oIusXGY=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -54,7 +54,7 @@
       "System.Threading.dll": "sha256-lXTqz4P//kd/mQlYmYIjQW58o/9IOCa3Lkt2I2iPfHg=",
       "System.dll": "sha256-X00CS76RYP+1bonecVV1Cn/0jOHeoVQUo1GS8UHpHpM=",
       "System.Private.CoreLib.dll": "sha256-wJJUSTO7u76qURA9+pCBI+pEK4U+ABDsXW2ANU+n/zU=",
-      "SmallTaskForceWeb.dll": "sha256-gmZeePnj2sBPLmoj+F5AkDc3WdS3rKliB1ijAAA+24A="
+      "SmallTaskForceWeb.dll": "sha256-8wdIV4bsYZaQCX3Wc6MXDxnB2f18AfHN29tqM2muGdI="
     },
     "runtimeAssets": {
       "dotnet.wasm": {
