@@ -1,8 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
-    <header class="border-b bg-white/80 backdrop-blur">
-        <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
+    <header class="sticky inset-x-0 top-0 z-30 border-b bg-white/80 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
             <div class="flex items-center gap-3">
                 <div class="h-10 w-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-semibold">ST</div>
                 <div>
@@ -10,7 +10,21 @@
                     <div class="text-sm text-slate-500">Software Development</div>
                 </div>
             </div>
-            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <div class="flex items-center gap-3">
+                <button class="sm:hidden inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50" @onclick="ToggleMenu" aria-label="Toggle navigation">
+                    Menu
+                </button>
+                <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+                    <a class="hover:text-slate-900" href="/">Home</a>
+                    <a class="hover:text-slate-900" href="/critical">CRITICAL</a>
+                    <a class="hover:text-slate-900" href="#services">Services</a>
+                    <a class="hover:text-slate-900" href="#process">Process</a>
+                    <a class="hover:text-slate-900" href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+        <div class="sm:hidden px-6 pb-4">
+            <nav class="@($"text-sm font-medium text-slate-700 bg-white rounded-lg border border-slate-200 px-4 py-3 shadow-sm {(_menuOpen ? "flex flex-col gap-3" : "hidden")}")">
                 <a class="hover:text-slate-900" href="/">Home</a>
                 <a class="hover:text-slate-900" href="/critical">CRITICAL</a>
                 <a class="hover:text-slate-900" href="#services">Services</a>
@@ -35,3 +49,8 @@
         </div>
     </footer>
 </div>
+
+@code {
+    private bool _menuOpen;
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+}
